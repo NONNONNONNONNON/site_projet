@@ -8,10 +8,18 @@
 			<section>
 				<br> <em> Liste des nouveaux épisodes. </em>
 				<ul>
-					<li> <a href = ""> <figcaption> One punch man  </a> | <a href = ""> #01 </a> <a href = ""> </figcaption> <img src = "One_punch_man_img.jpg"> </a> </li>
-					<li> <a href = ""> <figcaption> Death Note </a> | <a href = ""> #01 </a> <a href = ""> </figcaption> <img src = "Death_note_img.jpg"> </a> </li>
-					<li> <a href = ""> <figcaption> Detective Conan </a> | <a href = ""> #01 </a> <a href = ""> </figcaption> <img src = "Detective_conan_img.jpg"> </a> </li>
-					<li> <a href = ""> <figcaption> Shingeki no kyojin </a> | <a href = ""> #01 </a> <a href = ""> </figcaption> <img src = "Shingeki_no_kyojin_img.jpg"> </a> </li>
+					<?php
+						$bdd = new PDO('mysql:host=localhost;dbname=animes;charset=utf8', 'root', '');
+						$response = $bdd->query('SELECT * FROM animes ORDER BY dateID');
+					?>
+					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
+					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
+					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
+					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
+					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
+					<?php
+						$reponse->CloseCursor();
+					?>
 				</ul>
 			</section>
 			</div>
@@ -33,6 +41,7 @@
 			<div class = "Top_des_vues">
 			<section>
 				<br> <em> Top des vues </em>
+				
 				<ul type:"1" start = 1>
 					<li> <a href = ""> Top Animé 1 : nombre de vue</a> </li>
 					<li> <a href = ""> Top Animé 2 : nombre de vue</a> </li>
