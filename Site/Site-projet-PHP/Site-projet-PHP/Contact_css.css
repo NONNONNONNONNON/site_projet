@@ -1,0 +1,22 @@
+p
+{
+	font-size: 1.8em;
+	font-family: verdana;
+	text-align: justify;
+
+}
+
+em
+{
+	font-size: 2em;
+	font-family: comic;
+	text-align: justify
+
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+	font-style: italic;
+}
