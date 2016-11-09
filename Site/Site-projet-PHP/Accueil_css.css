@@ -9,7 +9,7 @@ p
 em
 {
 	font-size: 2em;
-	font-family: verdana,sans-serif;
+	font-family: 'Japanese Brush',verdana,sans-serif;
 	text-align: justify
 
 }
@@ -18,13 +18,18 @@ a
 {
 	text-decoration: none;
 	color: black;
-	font-style: italic;
+	font-style: none;
 }
 
 section
 {
 	display: inline-block;
 	margin: 0.5em;
+}
+
+img
+{
+	box-shadow: 1px 1px 12px #555;
 }
 
 .Nouveaux_episodes
@@ -76,7 +81,7 @@ section
 {
 	position: relative;
 	top: -8.5em;
-	left: 30em;
+	left: 1em;
 }
 
 img

@@ -1,10 +1,13 @@
 p
 {
+	display: inline-block;
+	width: 25em;
 	font-size: 1.8em;
 	font-family: verdana;
 	text-align: justify;
 	border: double;
 	margin: 68px;
+	word-wrap: break-word;
 }
 
 .titre

@@ -6,7 +6,7 @@
 		<div class = "main">
 			<div class = "Nouveaux_episodes">
 			<section>
-				<br> <em> Liste des nouveaux épisodes. </em>
+				<br> <em> Liste des nouveaux episodes : </em>
 				<ul>
 					<li> <a href = ""> <figcaption> One punch man  </a> | <a href = ""> #01 </a> <a href = ""> </figcaption> <img src = "One_punch_man_img.jpg"> </a> </li>
 					<li> <a href = ""> <figcaption> Death Note </a> | <a href = ""> #01 </a> <a href = ""> </figcaption> <img src = "Death_note_img.jpg"> </a> </li>
@@ -26,7 +26,7 @@
 			</div>
 			<div class = "Animes_suggeres">
 			<section>
-				<em> Animé suggéré </em> <br> <br>
+				<em> Anime suggere </em> <br> <br>
 				<a href = ""> <img src = "Assassination_classroom_img.jpg"> </a> </li>
 			</section>
 			</div>

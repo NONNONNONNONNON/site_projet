@@ -7,9 +7,9 @@
 
 		<section>
 			<ul>
-				<li> <div class = "titre"> Article 1 </div> <br>
+				<li> <div class = "titre"> Article 1 </div>
 					<p> Blablablablablablablablablablablablablablablablablablablablablablablablabla </p> <hr> </li>
-				<li> <div class = "titre"> Article 2 </div> <br> 
+				<li> <div class = "titre"> Article 2 </div>
 					<p> BLUBLUBLBULBBULBULUBLUBLULBBULULBULBULBULBULBULBLUBULBULBULUBLULBULBULBULBULBULB </p> </li>
 		<div class = "main">
 		</div>

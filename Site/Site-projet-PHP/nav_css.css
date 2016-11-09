@@ -1,14 +1,22 @@
 @font-face {
-font-family:'Japanese Brush';
-src:url("JAPAB___.eot?") format("eot");	
-src:url("JAPAB___.woff") format("woff"),
-	url("JAPAB___.ttf") format("truetype"),
-	url("JAPAB___.svg#JapaneseBrush") format("svg");
+	font-family:'Japanese Brush';
+		src:url("JAPAB___.eot?") format("eot"),	
+			url("JAPAB___.woff") format("woff"),
+			url("JAPAB___.ttf") format("truetype"),
+			url("JAPAB___.svg#JapaneseBrush") format("svg");
+}
+@font-face {
+	font-family:"Katana";
+		src:url("Katanf.eot?") format("eot"),
+			url("Katanf.woff") format("woff"),
+			url("Katanf.ttf") format("truetype"),
+			url("Katanf.svg#Katana") format("svg");
 }
 
 html
 {
-	background: url(background.jpg) fixed repeat;
+	background: url(background.jpg);
+	background-size: cover;
 }
 
 header
@@ -40,7 +48,7 @@ nav
 	margin: 0;
 	text-align: center;
 	font-size: 2em;
-	font-family: monospace;
+	font-family: 'Katana';
 	border-radius: 10px
 }
 
@@ -53,16 +61,18 @@ nav ul li
 
 nav ul li a
 {
+	list-style: none;
+	text-decoration: none;
 	display: inline-block;
 	border-radius: 5px;
 	padding: 0.1em;
 	background-color: rgba(114,143,153,0.25);
-	font-family: verdana
 	color: #AAA;
 }
 
 nav ul li a:hover
 {
+	list-style: none;
 	text-decoration: none;
 	background-color: #AAA;
 	color: black;
