@@ -26,7 +26,8 @@ if(!array_key_exists('IsLogin', $_SESSION))
 	</head>
 	<body>
 		<header>
-			TITRE DU SITE
+			<br>
+			JAPANIMATION
 		</header>
 		<nav>
 			<ul>

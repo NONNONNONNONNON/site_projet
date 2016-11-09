@@ -1,3 +1,11 @@
+@font-face {
+font-family:'Japanese Brush';
+src:url("JAPAB___.eot?") format("eot");	
+src:url("JAPAB___.woff") format("woff"),
+	url("JAPAB___.ttf") format("truetype"),
+	url("JAPAB___.svg#JapaneseBrush") format("svg");
+}
+
 html
 {
 	background: url(background.jpg) fixed repeat;
@@ -5,18 +13,22 @@ html
 
 header
 {
+	display: inline-block;
+	background: url(banniere.jpg);
+	width:17em;
+	height:3.9em;
 	font-size: 50px ;
 	font-weight: bold;
 	text-align: center;
 	line-height: 1em;
-	font-family: verdana;
+	font-family: 'Japanese Brush';
 }
 
 body
 {
 	margin: 0 auto;
-	width: 67.5em;
-	background-color: rgba(114,143,153,0.25);
+	width: 53.125em;
+	background-color: rgba(255,255,255,1);
 	border-bottom-left-radius: 50px;
 	border-bottom-right-radius: 50px;
 }
@@ -43,7 +55,7 @@ nav ul li a
 {
 	display: inline-block;
 	border-radius: 5px;
-	padding: 0.65em;
+	padding: 0.1em;
 	background-color: rgba(114,143,153,0.25);
 	font-family: verdana
 	color: #AAA;
