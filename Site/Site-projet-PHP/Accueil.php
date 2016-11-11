@@ -1,4 +1,5 @@
-<?php include('glob.php');
+<?php
+include('glob.php');
 ?>
 <DOCTYPE html>
 <link rel="stylesheet" href="Accueil_css.css">
@@ -8,18 +9,22 @@
 			<section>
 				<br> <em> Liste des nouveaux épisodes. </em>
 				<ul>
-					<?php
-						$bdd = new PDO('mysql:host=localhost;dbname=animes;charset=utf8', 'root', '');
-						$response = $bdd->query('SELECT * FROM animes ORDER BY dateID');
-					?>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<?php
-						$reponse->CloseCursor();
-					?>
+				<?php
+					$bdd = new PDO('mysql:host=localhost;dbname=animes;charset=utf8', 'root', '');
+					$response = $bdd->query('SELECT * FROM animes ORDER BY dateID');
+					
+					$form = $reponse->fetch(); 
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form["animeName"].'&ep='.$form['episode'].'</a> </li>';
+					$form = $reponse->fetch();
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
+					$form = $reponse->fetch(); 
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
+					$form = $reponse->fetch(); 
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
+					$form = $reponse->fetch();
+					echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
+					$reponse->CloseCursor();
+				?>
 				</ul>
 			</section>
 			</div>
