@@ -14,16 +14,16 @@ include('glob.php');
 					$response = $bdd->query('SELECT * FROM animes ORDER BY dateID');
 					
 					$form = $reponse->fetch(); 
-					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form["animeName"].'&ep='.$form['episode'].'</a> </li>';
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$response['animeName'].'&ep='.$response['episode'].'>'.$response['animeName'].' !</a> </li>';
 					$form = $reponse->fetch();
-					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$response['animeName'].'&ep='.$response['episode'].'>'.$response['animeName'].' !</a> </li>';
 					$form = $reponse->fetch(); 
-					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$response['animeName'].'&ep='.$response['episode'].'>'.$response['animeName'].' !</a> </li>';
 					$form = $reponse->fetch(); 
-					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$response['animeName'].'&ep='.$response['episode'].'>'.$response['animeName'].' !</a> </li>';
 					$form = $reponse->fetch();
-					echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a> </li>';
-					$reponse->CloseCursor();
+					echo '<a href=SCRIPT_PAGE.php?nom='.$response['animeName'].'&ep='.$response['episode'].'>'.$response['animeName'].' !</a> </li>';
+					$response->CloseCursor();
 				?>
 				</ul>
 			</section>
@@ -48,9 +48,18 @@ include('glob.php');
 				<br> <em> Top des vues </em>
 				
 				<ul type:"1" start = 1>
-					<li> <a href = ""> Top Animé 1 : nombre de vue</a> </li>
-					<li> <a href = ""> Top Animé 2 : nombre de vue</a> </li>
-					<li> <a href = ""> Top Animé 3 : nombre de vue</a> </li>
+				<?php
+					$bdd = new PDO('mysql:host=localhost;dbname=series;charset=utf8', 'root', '');
+					$response = $bdd->query('SELECT * FROM series ORDER BY vues');
+					
+					$form = $reponse->fetch(); 
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form["animeName"].'&ep=1> Animé le plus populaire !</a> </li>';
+					$form = $reponse->fetch();
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep=1> 2nd Animé le plus populaire !</a> </li>';
+					$form = $reponse->fetch(); 
+					echo '<li><a href=SCRIPT_PAGE.php?nom='.$form['serieName'].'&ep=1> 3eme Animé le plus populaire !</a> </li>';
+					$reponse->CloseCursor();
+				?>
 				</ul>
 			</section>
 			</div>
