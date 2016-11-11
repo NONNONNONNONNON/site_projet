@@ -12,11 +12,11 @@
 						$bdd = new PDO('mysql:host=localhost;dbname=animes;charset=utf8', 'root', '');
 						$response = $bdd->query('SELECT * FROM animes ORDER BY dateID');
 					?>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
-					<li> <?php $form = $reponse.fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';></li>
+					<li> <?php $form = $reponse->fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';?></li>
+					<li> <?php $form = $reponse->fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';?></li>
+					<li> <?php $form = $reponse->fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';?></li>
+					<li> <?php $form = $reponse->fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';?></li>
+					<li> <?php $form = $reponse->fetch(); echo '<a href=SCRIPT_PAGE.php?nom='.$form['animeName'].'&ep='.$form['episode'].'</a>';?></li>
 					<?php
 						$reponse->CloseCursor();
 					?>
